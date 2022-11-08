@@ -1,0 +1,332 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "The Girl Next Door";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/thegirlnextdoor/v16/pe0zMJCIMIsBjFxqYBIcZ6_OI5oFHCY4ULF6.woff2) format("woff2");
+}
+header nav {
+  width: 40px;
+  height: 150px;
+  background-color: rgba(255, 94, 0, 0.3647058824);
+  position: fixed;
+  left: 40px;
+  z-index: 999;
+}
+header nav:hover {
+  background-color: rgba(255, 255, 255, 0.39);
+}
+header nav .socialmedia {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  margin-top: 25px;
+}
+header nav .socialmedia img {
+  width: 25px;
+  transition: transform 250ms;
+}
+header nav .socialmedia img:hover {
+  transform: translateY(-7px);
+}
+
+main .blockone {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .blockone img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(70%);
+}
+main .blockone .textgroß {
+  width: 60%;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+}
+main .blockone .textgroß h2 {
+  font-size: 1.9rem;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+main .blockone .textgroß h2 span {
+  font-weight: 500;
+  opacity: 50%;
+  font-family: "The Girl Next Door";
+}
+main .blockone .textgroß h2 span:hover {
+  color: orange;
+}
+main .blockone .textklein {
+  width: 55%;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  opacity: 70%;
+  animation: slide-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+main .blockone .textklein p {
+  text-align: right;
+}
+main .blockone .textklein span {
+  top: -13px;
+  right: -27px;
+  position: absolute;
+  z-index: 5;
+  font-size: 4.8rem;
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+main .nurhandy {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .nurhandy .circle1 {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 94, 0, 0.3647058824);
+  border-radius: 50px;
+  position: absolute;
+  z-index: 777;
+  bottom: 80px;
+  right: 25px;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  line-height: 43px;
+}
+main .nurhandy .circle2 {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 94, 0, 0.3647058824);
+  border-radius: 50px;
+  position: absolute;
+  z-index: 777;
+  bottom: 40px;
+  right: 25px;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  line-height: 43px;
+}
+main .blocktwo {
+  display: none;
+}
+main .blocktwo .portfolio {
+  color: white;
+  position: fixed;
+  z-index: 888;
+  bottom: 0px;
+  right: 100px;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  transform: rotate(-90deg);
+  background-color: rgba(255, 255, 255, 0.349);
+  padding: 10px 20px 10px 100px;
+}
+main .blocktwo .zusammenfassung {
+  color: white;
+  position: fixed;
+  z-index: 888;
+  bottom: 0px;
+  right: 0px;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  transform: rotate(-90deg);
+  background-color: rgba(255, 136, 0, 0.349);
+  padding: 10px 20px 10px 150px;
+}
+main .kreisbewegung {
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: bottom;
+  position: fixed;
+  top: 250px;
+  right: -100px;
+  background-color: rgba(255, 94, 0, 0.3647058824);
+  border-radius: 100%;
+}
+main .audio {
+  position: absolute;
+  z-index: 999;
+  bottom: 120px;
+  right: 25px;
+  transform: rotate(-90deg);
+  width: 35px;
+  height: 35px;
+}
+
+@media screen and (min-width: 700px) {
+  header nav {
+    left: 60px;
+    background-color: rgba(255, 94, 0, 0.3647058824);
+  }
+  header nav:hover {
+    background-color: rgba(255, 255, 255, 0.233);
+  }
+
+  main .blockone .textgroß {
+    width: 50%;
+    bottom: 60px;
+    left: 60px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid white;
+    border-left: 1.5px solid white;
+  }
+  main .blockone .textgroß h2 {
+    font-size: 3rem;
+    line-height: 35px;
+  }
+  main .blockone .textklein {
+    width: 40%;
+    right: 50px;
+  }
+  main .blocktwo {
+    display: flex;
+  }
+  main .blocktwo a {
+    color: rgb(255, 255, 255);
+  }
+  main .blocktwo .portfolio {
+    right: 50px;
+    background-color: rgba(0, 0, 0, 0.5803921569);
+    border-bottom-right-radius: 20px;
+  }
+  main .blocktwo .portfolio:hover {
+    background-color: #ffa500;
+  }
+  main .blocktwo .zusammenfassung {
+    right: -50px;
+    background-color: rgba(0, 0, 0, 0.5803921569);
+    border-bottom-right-radius: 20px;
+  }
+  main .blocktwo .zusammenfassung:hover {
+    background-color: #ec673b;
+  }
+  main .nurhandy {
+    display: none;
+  }
+  main .kreisbewegung {
+    opacity: 100%;
+    width: 150px;
+    height: 150px;
+    right: -80px;
+    animation: animateTransform 60s infinite;
+  }
+  @keyframes animateTransform {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(680deg);
+    }
+  }
+  main .kreisbewegung:hover {
+    animation: bgcolor 1s ease-in-out;
+  }
+  @keyframes bgcolor {
+    0% {
+      background-color: rgba(255, 94, 0, 0.3647058824);
+      transform: scale(1);
+    }
+    50% {
+      background-color: #ff5e00;
+      transform: scale(1.5);
+    }
+    100% {
+      background-color: #ff5e00;
+      transform: scale(1.5);
+    }
+  }
+  main .audio {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    bottom: 60px;
+    right: 0px;
+    transform: rotate(-90deg);
+    width: 100px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header nav {
+    left: 60px;
+  }
+
+  main .blockone .textgroß {
+    width: 30%;
+  }
+  main .blockone .textgroß h2 {
+    font-size: 3.3rem;
+    line-height: 40px;
+    letter-spacing: -2px;
+  }
+  main .blockone .textklein {
+    width: 30%;
+    top: 80px;
+    right: 80px;
+    font-size: 1.2rem;
+  }
+  main .blockone .textklein span {
+    top: -18px;
+    right: -40px;
+    font-size: 5.5rem;
+  }
+  main .kreisbewegung {
+    width: 200px;
+    height: 200px;
+    top: 220px;
+    right: -100px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

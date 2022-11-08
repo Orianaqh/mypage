@@ -1,0 +1,19 @@
+{
+  "name": "projekt",
+  "version": "1.0.0",
+  "description": "April 2022.",
+  "main": "index.js",
+  "scripts": {
+    "aufbau": "mkdir -p src/scss && touch src/index.html && touch src/scss/_layout.scss && touch src/scss/_helpers.scss && touch src/scss/_typography.scss &&  echo '@import \"helpers\";@import \"typography\";@import \"layout\"; ' > src/scss/main.scss",
+    "watch": "sass -w ./src/scss/main.scss  ./src/css/main.css",
+    "portfolio": "sass -w ./src/scss/portfolio.scss ./src/css/portfolio.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "sass": "^1.50.0"
+  },
+  "devDependencies": {}
+}
